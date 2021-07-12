@@ -1,7 +1,7 @@
 # Hostina-Platform
-# The best platform for building applications of all types with modern architecture and scaling.
+## The best platform for building applications of all types with modern architecture and scaling.
 
-# Responsive Hosting Platform with training on HTML5 - CSS3 - CSS Grid, Flexbox & Media Query -Filters.
+## Responsive Hosting Platform with training on HTML5 - CSS3 - CSS Grid, Flexbox & Media Query -Filters.
 
 - It's partitioned to 3 pages :
     - Home Page that show overview about the platform.
