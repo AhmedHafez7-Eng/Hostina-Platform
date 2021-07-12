@@ -1,0 +1,564 @@
+:root {
+    --primary-color: #62e924;
+    --secondary-color: rgb(12, 95, 4);
+    --dark-color: #0b2506;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    color: #FFF;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li a {
+    color: #FFF;
+    padding: 10px;
+    margin: 0 5px;
+    letter-spacing: 2px;
+}
+
+.navbar ul li a:hover {
+    border-bottom: 2px solid#FFF;
+}
+
+/* Showcase */
+.showcase {
+    background-color: var(--primary-color);
+    height: 400px;
+    color: #FFF;
+    position: relative;
+}
+
+.showcase::before,
+.showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #FFF;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    -o-transform: skewY(-3deg);
+}
+
+.showcase .grid {
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcaseForm {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.showcaseForm .formControl {
+    margin: 30px 0;
+}
+
+.showcaseForm input[type='text'],
+.showcaseForm input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+/* Stats */
+.stats {
+    padding-top: 100px;
+}
+
+.stats .stats-heading {
+    max-width: 500px;
+    margin: auto;
+}
+
+.stats .grid h3 {
+    font-size: 35px;
+}
+
+.stats .grid p {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Cli */
+.cli .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid>*:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    filter: hue-rotate(280deg);
+    -webkit-filter: hue-rotate(280deg);
+}
+
+/* Cloud */
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
+/* Languages */
+.languages .flex {
+    flex-wrap: wrap;
+}
+
+.languages .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    user-select: none;
+}
+
+.languages .card:hover {
+    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    background-color: var(--dark-color);
+    color: #FFF;
+}
+
+.languages .card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Features Page */
+.featuresHead {
+    padding: 70px 0;
+}
+
+.featuresHead img,
+.docsHead img {
+    width: 200px;
+    justify-self: flex-end;
+}
+
+.featuresSubHead img {
+    width: 300px;
+    justify-self: flex-end;
+    filter: hue-rotate(280deg);
+    -webkit-filter: hue-rotate(280deg);
+}
+
+.featuresMain .card {
+    height: auto;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+    -moz-transition: background-color .3s ease;
+    -ms-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+}
+
+.featuresMain .card:hover {
+    background-color: var(--primary-color);
+    color: #FFF;
+}
+
+.featuresMain .card:hover svg {
+    color: #FFF;
+}
+
+.featuresMain .card>svg {
+    margin-right: 20px;
+}
+
+.featuresMain .grid {
+    padding: 30px;
+}
+
+.featuresMain .grid>*:first-child {
+    grid-column: 1/span 3;
+}
+
+.featuresMain .grid>*:nth-child(2) {
+    grid-column: 1/span 2;
+}
+
+/* Docs Page */
+.docsHead {
+    padding: 70px 0;
+}
+
+.docsMain .grid {
+    align-items: flex-start;
+    grid-template-columns: 1fr 2fr;
+}
+
+.docsMain h3 {
+    margin: 20px 0;
+}
+
+.docsMain nav li {
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #CCC;
+}
+
+.docsMain a:hover {
+    font-weight: bold;
+}
+
+.docsMain svg {
+    color: #FFF;
+}
+
+/* Footer */
+.footer .social a {
+    margin: 0 10px;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.footer a:hover {
+    opacity: .6;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+/* Responsive Queries */
+/* Responsive for Tablets and Under */
+@media(max-width: 768px) {
+
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid,
+    .docsMain .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcaseText {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .showcaseForm {
+        margin: auto;
+        justify-self: center;
+    }
+
+    .cli .grid>*:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .footer .container {
+        text-align: center;
+    }
+
+    .footer .container .brandCopyright {
+        letter-spacing: 3px;
+    }
+
+    .featuresHeadText,
+    .featuresSubHeadText,
+    .docsHeadText {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .featuresHead img,
+    .docsHead img,
+    .featuresSubHead img {
+        margin: auto;
+        justify-self: center;
+    }
+
+    .featuresMain .container .card {
+        grid-column: 1;
+        position: relative;
+        padding-top: 55px;
+    }
+
+    .featuresMain .card svg {
+        position: absolute;
+        top: 0;
+        margin: 10px 0 20px;
+    }
+}
+
+/* Responsive for Mobile */
+@media(max-width: 500px) {
+    .navbar {
+        height: 110px;
+    }
+
+    .navbar .flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .container {
+        padding: 0;
+    }
+
+    .showcase .container {
+        padding: 0 20px;
+    }
+
+    .showcaseForm {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .footer .social svg {
+        margin-top: 25px;
+    }
+
+    .featuresSubHead img,
+    .docsHead img {
+        width: 180px;
+    }
+
+    .docsHeadText h1 {
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 300px) {
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .lg {
+        font-size: 2rem;
+    }
+
+    .md {
+        font-size: 1.7rem;
+    }
+
+    .navbar {
+        height: 160px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .showcase .showcaseText h1 {
+        font-size: 26px;
+    }
+
+    .showcase .container {
+        padding: 0 5px;
+    }
+
+    .showcaseForm {
+        width: 100%;
+        padding: 14px;
+        font-size: 12px;
+        height: auto;
+    }
+
+    .showcaseForm input[type='text'],
+    .showcaseForm input[type='email'] {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .stats .grid h3 {
+        font-size: 30px;
+    }
+
+    .featuresMain .grid,
+    .docsMain .grid {
+        padding: 5px;
+    }
+
+    .featuresHead .featuresHeadText h1,
+    .featuresSubHead .featuresSubHeadText h1,
+    .docsHeadText h1 {
+        font-size: 26px;
+    }
+
+    .featuresHead .container .featuresHeadText .lead,
+    .featuresSubHead .container .featuresSubHeadText .lead,
+    .docsHeadText .lead {
+        font-size: 15px;
+    }
+
+    .featuresHead img,
+    .featuresSubHead img,
+    .docsHead img {
+        width: 160px;
+    }
+
+    .featuresMain .container .card,
+    .docsMain .card {
+        padding: 10px;
+        padding-top: 55px;
+    }
+
+    .featuresMain .container .card p {
+        font-size: 14px;
+    }
+
+    .docsMain .card {
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 186px) {
+    .btn {
+        padding: 10px 10px;
+    }
+
+    .card {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 0 5px;
+    }
+
+    .lg {
+        font-size: 1.3rem;
+    }
+
+    .md {
+        font-size: 1.4rem;
+    }
+
+    .navbar {
+        height: 160px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .showcase .showcaseText h1 {
+        font-size: 22px;
+    }
+
+    .showcase .showcaseText p {
+        font-size: 14px;
+    }
+
+    .showcase .container {
+        padding: 0 5px;
+    }
+
+    .showcaseForm {
+        width: 100%;
+        padding: 10px;
+        font-size: 9px;
+        height: auto;
+    }
+
+    .showcaseForm input[type='text'],
+    .showcaseForm input[type='email'] {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .stats .grid h3 {
+        font-size: 20px;
+    }
+
+    .stats .grid p {
+        font-size: 15px;
+    }
+
+    .lead {
+        font-size: 15px;
+    }
+
+    .footer .container .brandCopyright {
+        letter-spacing: 2px;
+    }
+
+    .featuresHead .featuresHeadText h1,
+    .featuresSubHead .featuresSubHeadText h1,
+    .docsHeadText h1 {
+        font-size: 22px;
+    }
+
+    .featuresHead .container .featuresHeadText .lead,
+    .featuresSubHead .container .featuresSubHeadText .lead,
+    .docsHeadText .lead {
+        font-size: 11px;
+    }
+
+    .featuresHead img,
+    .featuresSubHead img,
+    .docsHead img {
+        width: 100px;
+    }
+}
